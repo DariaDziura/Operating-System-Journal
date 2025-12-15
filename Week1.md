@@ -7,3 +7,4 @@ Ubuntu Server was selected as the operating system for this project due to its e
 #### Workstation approach choice and justification
 An Ubuntu desktop virtual machine was selected as the workstation environment rather than using the host machine with SSH client. This approach allows isolation between system being under development and the host operating system. That reduces impact of potential configuration errors and security risks during deployment.
 #### System Architecture Diagram
+![System Architecture Diagram](images/ArchitectureDiagram.png)
