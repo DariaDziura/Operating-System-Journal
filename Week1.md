@@ -30,3 +30,27 @@ As shown in figure 2, base memory has been allocated at 8043MB and system was co
 Additionally, a network adapter configured with a host-only network was added, in accordance with the system architecture shown in Figure 1.
 
 #### Ubuntu installation
+![Figure 3. Initial Ubuntu configuration (workstation)](images/UbuntuInstallationWorkstation.png)
+
+Figure 3. Initial Ubuntu configuration.
+
+
+Figure 3 shows the initial Ubuntu configuration for the workstation. As shown in Figure 3, Ubuntu Desktop was installed using the default installation settings, with no additional applications selected during the installation process.
+
+### Server
+#### Virtual machine creation and Ubuntu Installation
+![Figure 4](images/VMSummaryServer.png)
+
+Figure 4. Parameters of server's virtual machine.
+
+The server virtual machine was configured in a similar way to the workstation virtual machine, with two key differences. Ubuntu Live Server ISO was used as the installation media via the IDE controller, and an additional network adapter was added for future NAT configuration, in accordance with the system architecture shown in Figure 1.
+
+![Firgue 5. Headless linux server installed](images/UbuntuInstalledServer.png)
+
+Figure 5. Headless linux server installation.
+
+
+Figure 5 shows the successful installation of a headless Linux server. After installing Ubuntu Server using the Ubuntu Live Server ISO and rebooting the machine, the server was ready for further configuration.
+
+## Host-only network configuration
+
