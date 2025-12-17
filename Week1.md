@@ -20,6 +20,13 @@ In this section, both virtual machines are created and connected via a host-only
 
 ### Workstation
 #### Virtual Machine creation
-Figure 2 presents the installation parameters of workstation's virtual machine.
+![Figure 2. Parameters of workstation's virtual machine](images/VMInstallationSummary.png)
 
-![Figure 2. Parameters of workstation's virtual machine](...)
+Figure 2. Installation parameters of workstation's virtual machine.
+
+
+As shown in figure 2, base memory has been allocated at 8043MB and system was configured with three processors.This allocation was chosen to ensure sufficient resources for the workstation to operate smoothly during administrative tasks. As screenshot was taken after the Ubuntu installation, no IDE controller is shown. The Ubuntu Desktop ISO was used to install the operating system.
+
+Additionally, a network adapter configured with a host-only network was added, in accordance with the system architecture shown in Figure 1.
+
+#### Ubuntu installation
