@@ -20,3 +20,6 @@ In this section, both virtual machines are created and connected via a host-only
 
 ### Workstation
 #### Virtual Machine creation
+Figure 2 presents the installation parameters of workstation's virtual machine.
+
+![Figure 2. Parameters of workstation's virtual machine](...)
