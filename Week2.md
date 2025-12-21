@@ -116,3 +116,11 @@ This checklist will be used as verification reference during security implementa
 
 By defining security controls in advance, this approach supports structured security implementation, reduces configuration errors, and aligns with recognised security best parctice [5].
 ## Threat model table
+| Threat | Description | Mitigation Strategy |
+|-------|-------------|---------------------|
+| Brute-force SSH attacks | Automated attempts to gain unauthorised access to the server via the SSH service | Enforce key-based authentication, disable password login, restrict SSH access via firewall, deploy intrusion detection mechanisms |
+| Privilege escalation | An attacker gains elevated privileges after initial access, potentially compromising the entire system | Disable root SSH login, use non-root administrative accounts, enforce least privilege via sudo |
+| Unnecessary exposed services | Additional running services increase the attack surface and potential vulnerabilities | Minimise installed services, restrict open ports using firewall rules, regularly audit active services |
+
+
+The identified threats and mitigation strategies are based on common attack vectors and established security best practices [5], [7], [8].
