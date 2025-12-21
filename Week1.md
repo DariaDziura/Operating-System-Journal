@@ -3,7 +3,7 @@
 ### Architecture requirements
 Requirements of this assignment include a headless server without desktop environment, administered remotely through the workstation acting as an administrative access point. Regarding the workstation, following approaches are allowed: second Linux Desktop VM, my host machine with SSH client or a hybrid approach
 #### Distribution Selection and Justification
-Ubuntu Server was selected as the operating system for this project due to its extensive official documentation and Long-Term Support (LTS) release model. LTS releases provide predictable security updates and long-term stability, making Ubuntu Server well suited for server environments [3]. Additionally, the availability of comprehensive documentation and community resources supports effective troubleshooting and system administration during deployment and configuration [2].
+Ubuntu Server was selected as the operating system for this project due to its extensive official documentation and Long-Term Support (LTS) release model. LTS releases provide predictable security updates and long-term stability, making Ubuntu Server well suited for server environments [2]. Additionally, the availability of comprehensive documentation and community resources supports effective troubleshooting and system administration during deployment and configuration [1].
 #### Workstation approach choice and justification
 An Ubuntu desktop virtual machine was selected as the workstation environment rather than using the host machine with SSH client. This approach allows isolation between system being under development and the host operating system. That reduces impact of potential configuration errors and security risks during deployment.
 #### System Architecture Diagram
@@ -11,7 +11,7 @@ An Ubuntu desktop virtual machine was selected as the workstation environment ra
 
 The system architecture diagram (Figure 1) demonstrates the connection between the server and the workstation. Administrative management is performed via SSH over a host-only network. This approach provides an isolated communication channel without exposing the virtual machines to external networks. While this isolation creates a secure environment suitable for controlled administrative tasks, it does not fully reflect real-world production deployments where servers typically communicate across wider networks. However, considering the scope of this assignment and its focus on initial configuration stages, the use of a host-only network is appropriate.
 
-Additionally, server will connect to the internet through NAT connection, what allows it to use host machine's IP, rather than creating it's own [vm network source] and as a result provides additional security while system is being deployed. While NAT provides a secure method for outbound internet access, it also introduces certain limitations. Services running on the server are not directly reachable from external networks without explicit port forwarding, which can complicate testing of publicly accessible services. Additionally, NAT obscures the server’s real network identity behind the host machine, reducing visibility and control over inbound traffic. This trade-off is acceptable during early deployment phases, where security and controlled access are prioritised over external reachability.
+Additionally, server will connect to the internet through NAT connection, what allows it to use host machine's IP, rather than creating it's own and as a result provides additional security while system is being deployed. While NAT provides a secure method for outbound internet access, it also introduces certain limitations. Services running on the server are not directly reachable from external networks without explicit port forwarding, which can complicate testing of publicly accessible services. Additionally, NAT obscures the server’s real network identity behind the host machine, reducing visibility and control over inbound traffic. This trade-off is acceptable during early deployment phases, where security and controlled access are prioritised over external reachability [3]
 
 Alternative approaches such as bridged networking were considered but rejected at this stage due to increased exposure to external threats and reduced isolation during deployment.
 
@@ -122,3 +122,10 @@ Both the workstation and the server have been assigned IPv4 addresses in the 192
 
 ### 'lsb_release'
 The lsb_release command was used to retrieve Linux distribution information. On both systems, the output confirms that Ubuntu is installed. This verifies consistency between the server and workstation environments and supports the earlier justification for choosing Ubuntu due to its documentation and long-term support model.
+
+## Reference list
+1. Canonical Ltd., Ubuntu Server Documentation. [Online]. Available: https://ubuntu.com/server/docs [Accessed: 15-Dec-2025].
+   
+2. Canonical Ltd., Ubuntu Long Term Support (LTS) Releases.[Online]. Available: https://ubuntu.com/about/release-cycle [Accessed: 15-Dec-2025]
+
+3. Canonical Ltd., Ubuntu Server Guide – Chapter 6: Networking. [Online]. Available: https://ubuntu.com/server/docs/networking [Accessed: 15-Dec-2025].
