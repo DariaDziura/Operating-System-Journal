@@ -11,22 +11,22 @@ The server operates in a headless configuration with no desktop environment inst
 ### Metrics to be monitored
 The following performance metrics have been selected to provide a comprehensive view of system behaviour:
 
-1. CPU utilisation
+#### 1. CPU utilisation
 
 Used to analyse processor load, task scheduling, and the impact of CPU-intensive workloads.
 
 
-2. Memory usage
+#### 2. Memory usage
 
 Used to observe RAM consumption, caching behaviour, and potential memory pressure.
 
 
-3. Disk I/O activity
+#### 3. Disk I/O activity
 
 Used to evaluate filesystem performance, read/write behaviour, and storage bottlenecks.
 
 
-4. Network performance
+#### 4. Network performance
 
 Used to measure latency, throughput, and the impact of network-intensive workloads.
 
@@ -34,6 +34,18 @@ Used to measure latency, throughput, and the impact of network-intensive workloa
 These metrics align with standard operating system performance evaluation practices and provide the necessary data for identifying bottlenecks and optimisation opportunities in later phases [1].
 
 ### Monitoring Tools and Data Collection
+Monitoring will be performed native Linux command-line utilities, including but not limited to:
 
+- 'top' and 'uptime' for CPU load and system activity
+
+- 'free' for memory usage
+
+- 'df' for disk utilisation
+
+- 'ip' and related networking tools for interface and traffic inspection
+
+  All commands will be executed remotely via SSH, ensuring consistency with real-world remote administration workflows and reinforcing command-line proficiency [2], [4].
+
+  Where appropriate, monitoring commands may be executed repeatedly or scripted in later phases to enable consistent data collection across multiple testing scenarios.
 ## Security checklist
 ## Threat model table
