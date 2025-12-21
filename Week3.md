@@ -35,3 +35,33 @@ sudo apt install nginx
 The dd utility is included by default within the Linux core utilities and does not require additional installation.
 
 ## Expected Resource Profiles
+Prior to executing performance tests, the expected resource behaviour of each application has been identified based on its workload characteristics.
+- CPU-intensive workload (stress-ng)
+
+Expected to significantly increase CPU utilisation and system load averages, allowing analysis of processor scheduling and saturation effects.
+- Memory-intensive workload (stress-ng)
+
+Expected to consume a substancial portion of available RAM, enabling observation of memory pressure, caching behaviour, and potential swap usage.
+- Disk I/O workload (dd)
+
+Expected to generate sustained disk read or write activity, highlighting storage throughput limitations and I/O performance characteristics.
+- Network workload (iperf3)
+
+Expected to increase network traffic between the server and workstation, allowing measurment of throughput and latency under controlled conditions.
+- Server workload (nginx)
+
+Expected to produce moderate, continuous resource usage across CPU, memory, and network interfaces, representing a realistic service deployment scenario.
+
+Defining expected behaviour prior to testing supports structured analysis and enables meaningful comparison between observed results and theoretical expectations [1].
+
+## Monitoring Strategy
+System performance during workload execurtion will be monitored remotely from the workstation using SSH and native Linux command-line tools defined in the previous phase's performance testing plan. Metrics such as CPU load, memory usage, disk utilisation, and network activity will be observed in real time during baseline and workload execution phases.
+
+Using standard command-line monitoring tools ensures minimal system overhead and maintains consistency with headless server administration practices commonly used in professional environments [2], [3].
+## Reference list
+1. M. Nemeth, E. Snyder, T. Hein, B. Whaley, and D. Mackin, UNIX and Linux System Administration Handbook, 5th ed. Pearson, 2018.
+
+2. W. Shotts, The Linux Command Line, 2nd ed. No Starch Press, 2019.
+
+3. Canonical Ltd., “Ubuntu Server Guide – Performance and Monitoring.” [Online]. Available: https://ubuntu.com/server/docs
+. [Accessed: 21-Dec-2025].
