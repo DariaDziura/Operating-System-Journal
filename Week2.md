@@ -68,5 +68,51 @@ This approach supports controlled experimentation and enables meaningful compari
 ### Justification of approach
 This performance testing plan prioritises realism security, and minimal system impaact. Remote monitoring via SSH mirrors industry-standard server management practices and ensures that administrative tasks are performed without direct physical or graphical access to the server [4]. Using native command-line tools avoids unnecessary software dependencies and maintains a minimal, efficient server configuration [2].
 
-## Security checklist
+## Security configuration checklist
+### Objective
+This security configuration checklist defines the planned baseline security controls to be implemented on the server system in later phases of the coursework. The pupose of this checklist is to demonstrate an understanding of operating system security principles and to ensure that security controls are applied systematically rather than reactively.
+
+At this stage, no security configurations are implemented; the checklist serves as a designn and reference for subsequent phases.
+
+### Planned Security controls
+#### 1. Secure Remote Access (SSH)
+- SSH will be used as the sole administrative access method to the server
+- Key-based authentication will be enforced to eliminate password-based login risks
+- Root login over SSH will be disabled to reduce the impact of credetial compromise
+- Password authentication will be disabled once key-based access is confirmed
+- SSH configuration will be reviewed and hardened to align with industry best practices for remote system administration [4].
+
+#### 2. Firewall configuration
+- A host-based firewall will be enabled on the server
+- A default deny policy will be applied to incomming connections
+- SSH access will be explicitly permitted only from the designated workstation IP address
+- All unnecessary ports and services will remain closed to eliminate the attack surface
+- Firewall rules will be documented and verified to ensure correctness and persistence accross reboots
+
+#### 3. User and Privilege Management
+- A dedicated non-root administrative user will be created for system management
+- Administative privileges will be granted using sudo, adhering to the principle of least privilege
+- Direct root access will be avoided for routine administration tasks
+- User permissions will be reviewed to ensure that access rights are limited to what is strictly required [5]
+
+#### 4. Mandatory Access Control (MAC)
+- Mandatory Access Control will be enforced using AppArmor, which is enabled by default on Ubuntu systems
+- AppArmor profiles will be reviewed to ensure they are active and enforcing restrictions on key services
+- MAC controls will provide an additional layer of defence beyond traditional discretionary permissions, helping to contain potential compromises [6]
+
+#### 5. Automatic Security Updates
+- Automatic installation of security updates will be enabled to ensure timely patching of known vulnerabilities
+- Update configuration will prioritise security-related packages while minimising operational disruption
+- The update mmechanism will be verified to ensure it operates without requiring manual intervention [5]
+
+#### 6. Network Security and Isolation
+- The server and workstation will operate within an isolated virtual network environment
+- Network exposure will be limited to required services only
+- Network configuration will be documented to ensure clarity and reproducibility
+- Any future network configuration changes will be evaluated for security impact before implementation
+
+### Checklist Usage in Later Phases
+This checklist will be used as verification reference during security implementation and ausiting phases. Each item will be validated through configuration inspection, command-line evidence, and testing to confirm correct application.
+
+By defining security controls in advance, this approach supports structured security implementation, reduces configuration errors, and aligns with recognised security best parctice [5].
 ## Threat model table
