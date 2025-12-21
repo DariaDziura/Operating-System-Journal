@@ -124,3 +124,25 @@ By defining security controls in advance, this approach supports structured secu
 
 
 The identified threats and mitigation strategies are based on common attack vectors and established security best practices [5], [7], [8].
+
+## Reference list
+1. M. Nemeth, E. Snyder, T. Hein, B. Whaley, and D. Mackin, UNIX and Linux System
+Administration Handbook, 5th ed. Pearson, 2018.
+
+2. W. Shotts, The Linux Command Line, 2nd ed. No Starch Press, 2019.
+
+3. Canonical Ltd., “Ubuntu Server Guide – Monitoring and Logging.” Available:
+https://ubuntu.com/server/docs. Accessed: 21-Dec-2025.
+
+4. D. Barrett, R. Silverman, and R. Byrnes, SSH, The Secure Shell: The Definitive Guide, 2nd ed.
+O’Reilly Media, 2005.
+
+5. National Institute of Standards and Technology (NIST), Security and Privacy Controls for
+Information Systems and Organizations, NIST SP 800-53 Rev. 5, 2020.
+
+6. Canonical Ltd., “Ubuntu Security – AppArmor.” Available:
+https://ubuntu.com/security/apparmor. Accessed: 21-Dec-2025.
+
+7. A. Shostack, Threat Modeling: Designing for Security. Wiley, 2014.
+
+8. ‘OWASP Top 10 Infrastructure Security Risks | OWASP Foundation’. Accessed: Dec. 21, 2025. [Online]. Available: https://owasp.org/www-project-top-10-infrastructure-security-risks/
