@@ -55,4 +55,23 @@ Figure 5 shows the successful installation of a headless Linux server. After ins
 ## Host-only network configuration
 In this part host-only network is established between the workstation and the server. As we added host-only adapters while creating virtual machines, this step won't be shown in this phase.
 
+### IP check
+At first ip addr command was run on both: workstation and a server, to ensure that they are vissible on the network. The result for workstation is shown in the figure 6.
 
+![figure 6. IP address check for the workstation](images/WorkstationIP.png)
+
+Figure 6. Result of calling ip addr on workstation.
+
+
+As we can see in the figure 6, workstation's IP is 192.168.56.101/24, where /24 is a subnet mask (signifying that the first 3 octets of numbers are the network addres).
+
+For the server results of calling ip addr shows figure 7.
+
+![Figure 7. IP address check for the server](images/ServerIP.png)
+
+Figure 7. Result of calling ipaddr on the server.
+
+
+On the screen above we can see that the server's IP address is 192.168.56.104/24. As the first three octets are the same as well as the subnet mask, we can see both machines are a part of the same network.
+
+As it has been astablished that machines are on the same network, their ability to see eachother has been checked as shown on figure 8.
