@@ -7,3 +7,7 @@ In this assignment I am going to configure a host-only network, consisting of se
 [System Planning and Distribution Selection](Week1.md)
 
 [Security Planning and Testing Methodology](Week2.md)
+
+[Application Selection for Performance Testing](Week3.md)
+
+[Initial System Configuration and Secure Remote Administration](Week4.md)
