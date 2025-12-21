@@ -85,4 +85,40 @@ As we can see on figure 8, pinging server's IP address on the workstation result
 
 As openSHH / SHH hasn't been installed while installing Ubuntu, we can't remotely connect to the server yet. SHH setup as well as NAT network setup will be sone in the future phases.
 
+## Baseline verification
+For this part commands, namely: 'name', 'free', 'df -h', 'ip addr' and 'lsb_release' were run to verify the system baseline. Data received, will be used in the future phases to analyse the peformance of the system. Results of running said commands show figure 9 and figure 10.
 
+![Figure 9. Workstation's baseline](images/WorkstationCommands.png)
+
+Figure 9. Workstation's baseline system information.
+
+![Figure 10. Server's baseline.](images/ServerCommands.png)
+
+Figure 10. Server's baseline system information.
+
+### Baseline system analysis and information (based on the results shown in figures 9 and 10)
+
+To establish the baseline and ensure that system has been configured with the sufficient resources for the assignment brief, results of running each of this commands will be analysed.
+
+#### 'name'
+The 'name' command verifies what operating system machine is running on. In both cases the output is Linux, what proofs that the operating system has been installed correctly, what complies with the initial arcitecture choices.
+
+### 'free'
+The 'free' command presents storage usage statistics, namely: used, free, and available memory, as well as swap usage.
+
+As presented in above figures, there is a very low memory usage for the server, what is expected for a headless system. It proves that the system is currently idle and oparates efficiently. 
+
+On the workstation, higher memory usage is observed, due to the presence of the graphical user interface. However, remaining memory is still sufficient to perform the requirements for this assignment.
+
+### 'df -h'
+The df -h command provides an overview of disk usage. The output shows mounted filesystems, their total size, used space, and available space.
+
+Both machines show adequate free disk space, with relatively low usage after installation. This confirms that the allocated virtual disks are sufficient for the scope of this assignment and leave room for future package installations, logs, and configuration files
+
+### 'ip addr'
+The ip addr command was used to inspect network interfaces and assigned IP addresses.
+
+Both the workstation and the server have been assigned IPv4 addresses in the 192.168.56.0/24 range on their host-only network interfaces. The shared subnet and matching subnet mask confirm that both machines are part of the same private network, enabling direct communication between them. This configuration is required for secure remote administration and testing without exposing the systems to external networks.
+
+### 'lsb_release'
+The lsb_release command was used to retrieve Linux distribution information. On both systems, the output confirms that Ubuntu is installed. This verifies consistency between the server and workstation environments and supports the earlier justification for choosing Ubuntu due to its documentation and long-term support model.
