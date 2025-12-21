@@ -47,5 +47,26 @@ Monitoring will be performed native Linux command-line utilities, including but 
   All commands will be executed remotely via SSH, ensuring consistency with real-world remote administration workflows and reinforcing command-line proficiency [2], [4].
 
   Where appropriate, monitoring commands may be executed repeatedly or scripted in later phases to enable consistent data collection across multiple testing scenarios.
+
+### Planned Testing Methodology
+Performance evaluation in later phases will follow a structured methodology consisting of:
+
+#### 1. Baseline measurement
+Capturing system performance under minimal load to establish reference values.
+
+#### 2. Workload execution
+Running selected applications representing different workload types (e.g., CPU-intensive, memory- intensive, I/O-intensive)
+
+#### 3. Live monitoring
+Observing system metrics during workload execution using the defined monitoring tools.
+
+#### 4. Post-test analysis
+Comparing results against baseline measurements to identify performance degradation, bottlenecks, and resource contention.
+
+This approach supports controlled experimentation and enables meaningful comparison between different workload scenarios [1], [7].
+
+### Justification of approach
+This performance testing plan prioritises realism security, and minimal system impaact. Remote monitoring via SSH mirrors industry-standard server management practices and ensures that administrative tasks are performed without direct physical or graphical access to the server [4]. Using native command-line tools avoids unnecessary software dependencies and maintains a minimal, efficient server configuration [2].
+
 ## Security checklist
 ## Threat model table
