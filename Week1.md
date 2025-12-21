@@ -53,4 +53,6 @@ Figure 5. Headless linux server installation.
 Figure 5 shows the successful installation of a headless Linux server. After installing Ubuntu Server using the Ubuntu Live Server ISO and rebooting the machine, the server was ready for further configuration.
 
 ## Host-only network configuration
+In this part host-only network is established between the workstation and the server. As we added host-only adapters while creating virtual machines, this step won't be shown in this phase.
+
 
