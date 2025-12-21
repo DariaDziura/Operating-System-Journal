@@ -5,3 +5,4 @@ In this assignment I am going to configure a host-only network, consisting of se
 ### Table of content
 
 [System Planning and Distribution Selection](Week1.md)
+[Security Planning and Testing Methodology](Week2.md)
