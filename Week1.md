@@ -69,9 +69,20 @@ For the server results of calling ip addr shows figure 7.
 
 ![Figure 7. IP address check for the server](images/ServerIP.png)
 
-Figure 7. Result of calling ipaddr on the server.
+Figure 7. Result of calling ip addr on the server.
 
 
 On the screen above we can see that the server's IP address is 192.168.56.104/24. As the first three octets are the same as well as the subnet mask, we can see both machines are a part of the same network.
 
 As it has been astablished that machines are on the same network, their ability to see eachother has been checked as shown on figure 8.
+
+![Figure 8. Pinging server from the workstation](images/WorkstationPingDone.png)
+
+Figure 8. Pinging server from the workstation.
+
+
+As we can see on figure 8, pinging server's IP address on the workstation resulted in transmiting data (4 packets send, 4 pacets recieved). This ICMP echo test proves that the network has been established and IP addressing is correct.
+
+As openSHH / SHH hasn't been installed while installing Ubuntu, we can't remotely connect to the server yet. SHH setup as well as NAT network setup will be sone in the future phases.
+
+
