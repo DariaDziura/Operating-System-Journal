@@ -39,3 +39,13 @@ All this process is presented in figure 4.
 ![Figure 4. SSH installation confirmation](images/Phase4/ServerSystemctlStatus.png)
 
 Figure 4. SSH installation confirmation.
+
+## Initial SSH Connection from Workstation
+After confirming that the SSH service was operational, a remote connection was  established from the workstation to the server using the host-only network interface, what is shown in figure 5.
+
+![Figure 5. Established connection from workstation to the server](images/Phase4/WorkstationInitialSSHConnection.png)
+
+Figure 5. Established connection from workstation to the server.
+
+From this point onward, all further configuration tasks were performed remotely via SSH, in accordance, as required in the assessment brief.
+
