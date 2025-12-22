@@ -49,3 +49,19 @@ Figure 5. Established connection from workstation to the server.
 
 From this point onward, all further configuration tasks were performed remotely via SSH, in accordance, as required in the assessment brief.
 
+## User and Privilege Management
+To reduce the risk associated with direct root access, a dedicated non-root administrative user was created. This approach follows the principle of least priviledge, ensuring that administrative tasks can be performed without routinely operating the root user, and as a result limiting the potential impact of accidental misconfiguration or credential compromise [1], [4].
+The new administrative user was granted elevated privileges through controlled membership of the 'sudo' group. Group membership was verified to confirm correct privilege assignment, and remote access was subsequently tested to ensure taht administrative tasks could be performed securely without relying on the original user account.
+Figures 6, 7 and 8 show respectively: evidence of user creation, evidence of priviledge assignment, evidence showing membership of the sudo group.
+
+![Figure 6. User creation](images/Phase4/WorkstationNONAdmin.png)
+
+Figure 6. User creation.
+
+![Figure 7. Privilege assignment](images/Phase4/WorkstationUserPrivileges.png)
+
+Figure 7. User privileges.
+
+![Figure 8. Membership of the sudo group](images/Phase4/WorkstationGroups.png)
+
+Figure 8. Membership of the sudo group.
