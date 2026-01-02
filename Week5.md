@@ -43,3 +43,26 @@ Figure 6. Fail2Ban enabled and it's status
 Figure 7. SSH jail active.
 
 ## Security Baseline and Verification Script
+To improve auditability and ensure configuration consistency, a security baseline verification script was created. The script performs automated checks of key hardening measures implemented through the coursework, allowing rapid verification of system security posture and early detection of configuration drift.
+
+![Figure 8.](images/Phase5/Figure8.png)
+
+Figure 8. Security baseline verification script (part 1)
+
+![Figure 9.](images/Phase5/Figure9.png)
+
+Figure 9. Security baseline verification script (part 2)
+
+![Figure10. ](images/Phase5/Figure10.png)
+
+Figure 10. Creating "security-baseline.sh" file and making it executable
+
+![Figure11. ](images/Phase5/Figure11.png)
+
+Figure 11. Result of running the "security-baselie.sh" script (part 1)
+
+![Figure12. ](images/Phase5/Figure12.png)
+
+Figure 12. Result of running the "security-baselie.sh" script (part 2)
+
+## Remote Monitoring and Performance Preparation
