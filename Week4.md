@@ -143,9 +143,12 @@ Together, these measures establish a strong and secure foundation for subsequent
 
 ## References
 [1] M. Nemeth, E. Snyder, T. Hein, B. Whaley, and D. Mackin, UNIX and Linux System Administration Handbook, 5th ed. Pearson, 2018.
+
 [2] D. Barrett, R. Silverman, and R. Byrnes, SSH, The Secure Shell: The Definitive Guide, 2nd ed. O’Reilly Media, 2005.
+
 [3] Canonical Ltd., Ubuntu Server Guide – Networking.
 [Online]. Available: https://ubuntu.com/server/docs/networking
 
 [Accessed: 21-Dec-2025].
+
 [4] National Institute of Standards and Technology (NIST), Security and Privacy Controls for Information Systems and Organizations, NIST SP 800-53 Rev. 5, 2020.
