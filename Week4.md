@@ -150,4 +150,4 @@ Together, these measures establish a strong and secure foundation for subsequent
 
 [Accessed: 21-Dec-2025].
 
-[4] National Institute of Standards and Technology (NIST), Security and Privacy Controls for Information Systems and Organizations, NIST SP 800-53 Rev. 5, 2020.
+[4] National Institute of Standards and Technology (NIST), Security and Privacy Controls for Information Systems and Organizations, NIST SP 800-53 Rev. 5, 2020. [Online]. Available: https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final [Accessed: 02-Jan-2026]
