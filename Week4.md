@@ -146,8 +146,7 @@ Together, these measures establish a strong and secure foundation for subsequent
 
 [2] D. Barrett, R. Silverman, and R. Byrnes, SSH, The Secure Shell: The Definitive Guide, 2nd ed. O’Reilly Media, 2005.
 
-[3] Canonical Ltd., Ubuntu Server Guide – Networking.
-[Online]. Available: https://ubuntu.com/server/docs/networking
+[3] Canonical Ltd., Ubuntu Server Documentation. [Online]. Available: https://ubuntu.com/server/docs [Accessed: 22-Dec-2025]
 
 [Accessed: 21-Dec-2025].
 
