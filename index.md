@@ -11,3 +11,6 @@ In this assignment I am going to configure a host-only network, consisting of se
 [Application Selection for Performance Testing](Week3.md)
 
 [Initial System Configuration and Secure Remote Administration](Week4.md)
+
+[Advanced Security and Monitoring Infrastructure](Week5.md)
+
