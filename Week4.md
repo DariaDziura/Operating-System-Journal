@@ -65,3 +65,87 @@ Figure 7. User privileges.
 ![Figure 8. Membership of the sudo group](images/Phase4/WorkstationGroups.png)
 
 Figure 8. Membership of the sudo group.
+
+## User authentication hardening
+Following successful remote access and user setup, SSH authentication was hardened to reduce exposure to common attack vectors. Public key authentication was selected in preference to password-based authentication due to its resistance to brute-force attacks and credential guessing [4].
+
+Key-based authentication was configured and verified before applying restrictive SSH configuration changes. This staged approach ensured that administrative access was not lost during the hardening process. Once verified, direct root login and password authentication were disabled within the SSH configuration, significantly strengthening remote access security.
+
+Steps are presented in the screenshots below:
+
+![Figure 9. Password based login to the server as an adminuser - verification](images/Phase4/1SuccessfulNonRootLogin_verification.png)
+
+Figure 9. Figure 9. Password based login to the server as an adminuser - verification
+
+
+![Figure 10. Old keys archived](images/Phase4/4OldFilesArchived.png)
+
+Figure 10. Old keys archived.
+
+
+![Figure 11. New keys generated](images/Phase4/5NewKeysGenerated.png)
+
+Figure 11. New keys generated.
+
+As keys were generated before, but no screenshots taken, old files were archived (Figure 10) and ne generated (Figure 11) to show the proccess.
+
+![Figure 12. Key file copied to the server](images/Phase4/6KeysCopied.png)
+
+Figure 12. Key file copied to the server.
+
+![Figure 13.Verifying successful key-based login](images/Phase4/7SuccessfulKeyBasedLogin.png)
+
+Figure 13. Veryfing successful key-based login.
+
+After veryfying that SSH key-based login works, configuration file is edited (Figures 14 and 15).
+
+![Figure 14. Configuration file before edits.](images/Phase4/8FileBefore.png)
+
+Figure 14. Configuration file before edits.
+
+![Figure 15. Configuration file after edits](images/Phase4/9FileAfter.png)
+
+Figure 15. Configuration file after edits.
+
+After restarting SSH (figure 16) key-based login was successful (Figure 17).
+
+![Figure 16. SSH restart](images/Phase4/10SHHRestart.png)
+
+Figure 16. SSH restart
+
+![Figure 17. Successful key-based login.](images/Phase4/11LoginAfterHardening.png)
+
+Figure 17. Successful key-based login.
+
+## Firewall configuration
+To further reduce the attack surface of the server, a host-based firewall was configured using Uncomplicated Firewall (UFW). UFW provides a simplified interface for managing iptables rules and is suitable for baseline server security on Ubuntu systems.
+
+The firewall configuration followed the principle of default deny, where all unsolicited inbound traffic is blocked unless explicitly allowed. This approach ensures that only essential services remain accessible. Before enabling the firewall, SSH access was explicitly allowed (Figure 18)
+
+![Figure 18. Firewall configuration.](images/Phase4/F1Rulesapplied.png)
+
+Figure 18. Firewall configuration.
+
+Firewall status was verified to confirm that the rules were applied correctly (Figure 19).
+
+![Figure 19. Firewall status after configuration](images/Phase4/F2Status confirmed.png)
+
+Figure 19. Firewall status after configuration.
+
+## Summary
+Phase 4 focused on securing remote access and hardening network-level controls on the server. Secure Shell (SSH) was configured to use key-based authentication, eliminating reliance on password-based logins and preventing direct root access. This significantly reduced the risk of brute-force and credential-based attacks.
+
+User privilege management ensured that administrative access was restricted to a non-root user with controlled sudo privileges. This aligns with the principle of least privilege and improves accountability.
+
+Finally, a host-based firewall was deployed using UFW to restrict network access to essential services only. By enforcing a default-deny policy and explicitly allowing SSH traffic, the server’s external attack surface was minimized while maintaining secure remote administration.
+
+Together, these measures establish a strong and secure foundation for subsequent security, performance, and auditing phases of the system configuration.
+
+## References
+[1] M. Nemeth, E. Snyder, T. Hein, B. Whaley, and D. Mackin, UNIX and Linux System Administration Handbook, 5th ed. Pearson, 2018.
+[2] D. Barrett, R. Silverman, and R. Byrnes, SSH, The Secure Shell: The Definitive Guide, 2nd ed. O’Reilly Media, 2005.
+[3] Canonical Ltd., Ubuntu Server Guide – Networking.
+[Online]. Available: https://ubuntu.com/server/docs/networking
+
+[Accessed: 21-Dec-2025].
+[4] National Institute of Standards and Technology (NIST), Security and Privacy Controls for Information Systems and Organizations, NIST SP 800-53 Rev. 5, 2020.
